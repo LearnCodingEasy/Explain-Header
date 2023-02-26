@@ -1,0 +1,441 @@
+/*
+===========================================================
+Todo ================= VARIABLES CSS ====================== 
+===========================================================
+*/
+:root {
+  --header-height: 5rem;
+
+  /* ========== Colors ========== */
+  /*
+  Hsl 
+  hsl(33, 93%, 54%);
+  1 => Color <=> هي درجة على عجلة الألوان من 0 إلى 360. 0 أحمر ، 120 أخضر ، 240 أزرق
+  2 => Saturation <=> التشبع هو قيمة النسبة المئوية ؛ 0٪ تعني ظل رمادي و 100٪ لون كامل
+  3 => lightness <=> الخفة هي أيضا نسبة ؛ 0٪ أسود ، 100٪ أبيض
+  Hsla 
+  3 => Opacity <=> الشفافية هي درجة على عجلة الألوان من 1 إلى 0
+  hsla(33, 93%, 54%, 0.500);
+   */
+  --hue-color: 33;
+
+  /* ========== Colors========== */
+  --color-first: hsl(var(--hue-color), 93%, 54%);
+  --color-first-light: hsla(var(--hue-color), 93%, 54%, 0.725);
+  --color-second: hsl(var(--hue-color), 93%, 54%);
+  --color-second-light: hsla(var(--hue-color), 93%, 54%, 0.725);
+  --color-third: hsl(240, 60%, 17%);
+  --color-third-light: hsla(240, 60%, 60%, 0.795);
+  // Body
+  --color-body: hsl(var(--hue-color), 93%, 100%);
+  --color-container: hsl(var(--hue-color), 93%, 100%);
+  // Header
+  // hsl(33, 93%, 54%)
+  --color-first-header: hsl(var(--hue-color), 93%, 54%);
+  // White
+  --color-second-header: hsl(var(--hue-color), 93%, 100%);
+  // Black
+  --color-third-header: hsl(var(--hue-color), 93%, 5%);
+  // Text
+  // Title
+  // hsl(33, 93%, 54%)
+  --color-first-title: hsl(var(--hue-color), 93%, 54%);
+  --color-first-title-light: hsla(var(--hue-color), 93%, 54%, 0.795);
+  // White
+  --color-second-title: hsl(var(--hue-color), 93%, 100%);
+  --color-second-title-light: hsla(var(--hue-color), 93%, 100%, 0.795);
+  // Black
+  --color-third-title: hsl(var(--hue-color), 93%, 5%);
+  --color-third-title-light: hsla(var(--hue-color), 93%, 5%, 0.795);
+  // Text
+  // hsl(33, 93%, 54%)
+  --color-first-text: hsl(var(--hue-color), 93%, 54%);
+  --color-first-text-light: hsla(var(--hue-color), 25%, 15%, 0.795);
+  // White
+  --color-second-text: hsl(var(--hue-color), 100%, 100%);
+  --color-second-text-light: hsla(var(--hue-color), 93%, 100%, 0.795);
+  // Black
+  --color-second-text: hsl(var(--hue-color), 100%, 5%);
+  --color-second-text-light: hsla(var(--hue-color), 93%, 15%, 0.795);
+  // Section
+  // hsl(33, 93%, 54%)
+  --color-first-section-bg: hsl(var(--hue-color), 93%, 54%);
+  // White
+  --color-second-section-bg: hsl(var(--hue-color), 93%, 100%);
+  // Black
+  --color-third-section-bg: hsl(var(--hue-color), 93%, 10%);
+  // Box
+  // hsl(33, 93%, 54%)
+  --color-first-box: hsl(var(--hue-color), 93%, 54%);
+  // White
+  --color-second-box: hsl(var(--hue-color), 93%, 100%);
+  // Black
+  --color-third-box: hsl(var(--hue-color), 93%, 5%);
+  // Button
+  // hsl(33, 93%, 54%)
+  --color-first-button: hsl(var(--hue-color), 93%, 54%);
+  // White
+  --color-second-button: hsl(var(--hue-color), 93%, 100%);
+  // Black
+  --color-third-button: hsl(var(--hue-color), 93%, 5%);
+  // Icon
+  // hsl(33, 93%, 54%)
+  --color-first-icon: hsl(var(--hue-color), 93%, 54%);
+  // White
+  --color-second-icon: hsl(var(--hue-color), 93%, 100%);
+  // Black
+  --color-third-icon: hsl(var(--hue-color), 93%, 6%);
+  // hsl(33, 5%, 54%)
+  --color-fourth-icon: hsl(var(--hue-color), 5%, 54%);
+  // Border
+  // hsl(33, 93%, 54%)
+  --color-first-border: hsl(var(--hue-color), 93%, 54%);
+  // White
+  --color-second-border: hsl(var(--hue-color), 93%, 100%);
+  // Black
+  --color-third-border: hsl(var(--hue-color), 93%, 5%);
+  // Overlay
+  // hsl(33, 93%, 54%)
+  --color-first-overlay: hsla(var(--hue-color), 93%, 54%, 0.725);
+  // White
+  --color-second-overlay: hsl(var(--hue-color), 93%, 54%);
+  // Black
+  --color-third-overlay: hsl(var(--hue-color), 93%, 5%);
+  // Scrollbar
+  --color-scrollbar-bg: hsl(var(--hue-color), 3%, 80%);
+  --color-scrollbar-thumb-bg: var(--color-first);
+  --color-selection: hsl(var(--hue-color), 3%, 90%);
+  --color-selection-bg: hsl(var(--hue-color), 93%, 54%);
+  --color-fff: #fff;
+  --color-000: #000;
+
+  /*  ========== Font => Size, Weight And Typography==========   */
+  --font-family-body: "Arimo", sans-serif;
+  --font-family-title: "Raleway", sans-serif;
+  --font-size-big: 2.25rem;
+  --font-size-bigger: 2.5rem;
+  --font-size-h1: 1.5rem;
+  --font-size-h2: 1.25rem;
+  --font-size-h3: 1rem;
+  --font-size-normal: 0.938rem;
+  --font-size-small: 0.813rem;
+  --font-size-smaller: 0.75rem;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  // Button
+  --font-size-button: 18px;
+
+  /* ========== Margin========== */
+  --m-0: 0;
+  --m-05: 0.5rem;
+  --m-1: 1rem;
+  --m-105: 1.5rem;
+  --m-2: 2rem;
+  --m-205: 2.5rem;
+  --m-3: 3rem;
+
+  /* ========== Z Index========== */
+  --z-tooltip: 10;
+  --z-fixed: 100;
+
+  /* ========== Scrollbar==========   */
+  --scrollbar-width: 1rem;
+  --scrollbar-border-radius: 0.25rem;
+
+  /* ========== Hover Overlay ========== */
+  --ele-transition-fast: 0.3s;
+  --ele-transition-normal: 0.4s;
+  --ele-transition-long: 0.9s;
+  --ele-transition-longer: 1.2s;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    /*  Font and typography  */
+    --font-size-big: 4rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+
+
+
+/*
+===========================================================
+Todo ================= Header ============================= 
+===========================================================
+*/
+// If You Use Header To Be Fixed Element
+.header {
+  position: relative;
+  transition: all 0.4s ease;
+  // Nav
+  .nav {
+    height: var(--header-height);
+    display: block;
+    // Div
+    .nav-wrapper {
+      // Div Container
+      .container {
+        // Div Inner
+        .nav-inner {
+          height: var(--header-height);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          // A Logo
+          .nav-log {
+            color: var(--color-second-header);
+            font-weight: var(--font-weight-medium);
+            display: block;
+            width: 15%;
+            img {
+              max-width: 100%;
+            }
+            &:hover {
+              color: var(--color-first-header);
+            }
+          }
+          // Div Menu
+          .nav-menu {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // Ul
+            .nav-list {
+              list-style: none;
+              padding: 0;
+              margin: 0;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              height: 100%;
+              /* Small Devices (Phones, Less Than 575.98px) = Bootstrap V5 Xs */
+              @media screen and (max-width: 575.98px) {
+                flex-direction: column;
+              }
+              /* Medium Devices (Phones, 576px And 677px) = Bootstrap V5 Sm */
+              @media screen and (min-width: 576px) and (max-width: 677px) {
+                flex-direction: column;
+              }
+              /* Large Devices (Phones, 678px And 767px) */
+              @media screen and (min-width: 678px) and (max-width: 767px) {
+                flex-direction: column;
+              }
+              // Li
+              .nav-item {
+                position: relative;
+                transition: all var(--ele-transition-normal) linear;
+                height: 100%;
+                // A
+                .nav-link {
+                  color: var(--color-second-header);
+                  font-weight: var(--font-weight-medium);
+                  text-decoration: none;
+                  transition: 0.3s;
+                  padding: 0 0.5rem;
+                  display: flex;
+                  justify-content: space-around;
+                  align-items: center;
+                  height: 100%;
+                  // Text
+                  .text {
+                    width: max-content;
+                  }
+                  // Icon
+                  .icon {
+                    padding: 0 0.5rem;
+                    /* Small Devices (Phones, Less Than 575.98px) = Bootstrap V5 Xs */
+                    @media screen and (max-width: 575.98px) {
+                      transform: rotate(270deg);
+                    }
+                    /* Medium Devices (Phones, 576px And 677px) = Bootstrap V5 Sm */
+                    @media screen and (min-width: 576px) and (max-width: 677px) {
+                      transform: rotate(270deg);
+                    }
+                    /* Large Devices (Phones, 678px And 767px) */
+                    @media screen and (min-width: 678px) and (max-width: 767px) {
+                      transform: rotate(270deg);
+                    }
+                  }
+                  // Hover
+                  &:hover {
+                    color: var(--color-first-header);
+                  }
+                  &.nav-link-active {
+                    color: var(--color-first-header);
+                  }
+                }
+                // Ul Sub Menu
+                .nav-item-submenu {
+                  list-style: none;
+                  padding: 0;
+                  margin: 0;
+                  position: absolute;
+                  left: -30px;
+                  top: 100%;
+                  width: 230px;
+                  z-index: 100;
+                  display: none;
+                  opacity: 0;
+                  visibility: hidden;
+                  padding: 20px 15px;
+                  border-radius: 10px;
+                  background-color: #ffffff;
+                  box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+                  transition: all var(--ele-transition-normal) linear;
+                  // Li
+                  li {
+                    a {
+                      text-decoration: none;
+                      .icon {
+                      }
+                    }
+                  }
+                  /* Small Devices (Phones, Less Than 575.98px) = Bootstrap V5 Xs */
+                  @media screen and (max-width: 575.98px) {
+                    width: max-content !important;
+                    left: 100% !important;
+                    top: -50% !important;
+                  }
+                  /* Medium Devices (Phones, 576px And 677px) = Bootstrap V5 Sm */
+                  @media screen and (min-width: 576px) and (max-width: 677px) {
+                    width: max-content !important;
+                    left: 100% !important;
+                    top: -50% !important;
+                  }
+                  /* Large Devices (Phones, 678px And 767px) */
+                  @media screen and (min-width: 678px) and (max-width: 767px) {
+                    width: max-content !important;
+                    left: 100% !important;
+                    top: -50% !important;
+                  }
+                }
+                &:hover {
+                  // Ul Sub Menu
+                  .nav-item-submenu {
+                    position: absolute;
+                    left: 0px;
+                    top: 100%;
+                    width: 230px;
+                    z-index: 100;
+                    display: block;
+                    opacity: 1;
+                    visibility: visible;
+                    transition: all var(--ele-transition-normal) linear;
+                    // Li
+                    li {
+                      a {
+                        text-decoration: none;
+                        .icon {
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            @media screen and (max-width: 768px) {
+              position: fixed;
+              // If
+              top: -100%;
+              left: 0;
+              width: 100%;
+              padding: 1.5rem 0 1rem;
+              text-align: center;
+              background-color: var(--color-first-header);
+              transition: 0.4s;
+              box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+              border-radius: 0 0 1rem 1rem;
+              z-index: var(--z-fixed);
+            }
+            // Class For Show Nav Menu On Mobile
+            &.show-menu {
+              top: var(--header-height);
+            }
+            /* Small Devices (Phones, Less Than 575.98px) = Bootstrap V5 Xs */
+            @media screen and (max-width: 575.98px) {
+              height: calc(100vh - 5rem);
+            }
+            /* Medium Devices (Phones, 576px And 677px) = Bootstrap V5 Sm */
+            @media screen and (min-width: 576px) and (max-width: 677px) {
+              height: calc(100vh - 5rem);
+            }
+            /* Large Devices (Phones, 678px And 767px) */
+            @media screen and (min-width: 678px) and (max-width: 767px) {
+              height: calc(100vh - 5rem);
+            }
+          }
+          // nav-search nav-form nav-button
+          .nav-search,
+          .nav-form,
+          .nav-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            .search,
+            .button {
+              // margin: 0 0.5rem;
+              width: max-content;
+            }
+            .search {
+              padding: 0.5rem;
+              border: 0.5rem solid transparent;
+            }
+          }
+          // Icon Toggle
+          .nav-toggle {
+            color: var(--color-second-header);
+            font-weight: var(--font-weight-medium);
+            font-size: var(--font-size-h3);
+            margin: 0 0 0 1rem;
+            cursor: pointer;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a {
+              text-decoration: none;
+            }
+            /* Medium Devices (Tablets, 768px And 991px) = Bootstrap V5 Md */
+            @media screen and (min-width: 769px) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  // Add Class Win Window Scroll
+  &.header-scroll-action {
+    /* If You Use Header To Be Fixed Element */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: var(--z-fixed);
+    background-color: var(--color-first-header);
+  }
+}
+
+
+// For Test
+section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10vw;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin: 2rem 0;
+  border: 3px solid #2222224f;
+}
