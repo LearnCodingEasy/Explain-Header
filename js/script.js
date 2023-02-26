@@ -29,7 +29,7 @@ Todo =============== DARK LIGHT THEME ===============
 const themeButton = document.getElementById("change-theme-icon");
 const darkTheme = "dark-theme";
 const iconTheme = "fa-sun";
-/*
+
 // Previously selected topic (if user selected)
 const selectedTheme = localStorage.getItem("selected-theme");
 const selectedIcon = localStorage.getItem("selected-icon");
@@ -39,8 +39,7 @@ const getCurrentTheme = () =>
   document.body.classList.contains(darkTheme) ? "dark" : "light";
 const getCurrentIcon = () =>
   themeButton.classList.contains(iconTheme) ? "fa-moon" : "fa-sun";
-  */
-/*
+
 // We validate if the user previously chose a topic
 if (selectedTheme) {
   // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
@@ -51,19 +50,17 @@ if (selectedTheme) {
     iconTheme
   );
 }
-*/
-/*
+
 // Activate / deactivate the theme manually with the button
 themeButton.addEventListener("click", () => {
-  console.log(`Yes`);
+  console.log(`Toggle Theme`);
   // Add or remove the dark / icon theme
-  // document.body.classList.toggle(darkTheme);
-  // themeButton.classList.toggle(iconTheme);
+  document.body.classList.toggle(darkTheme);
+  themeButton.classList.toggle(iconTheme);
   // We save the theme and the current icon that the user chose
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
-*/
 
 /*
 =====================================================
@@ -115,7 +112,7 @@ function scrollLinkActive() {
   sections.forEach((current) => {
     // Get Scroll Viewport Height
     let scrollY = window.pageYOffset;
-    console.log("scrollY: ", scrollY);
+    // console.log("scrollY: ", scrollY);
 
     // All Section Name
     let sectionId = current.getAttribute("Id");

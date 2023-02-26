@@ -163,7 +163,24 @@ Todo ================= VARIABLES CSS ======================
   }
 }
 
-
+/* ========== Variables Dark theme==========  */
+// هرجعلها
+body.dark-theme {
+  --color-body: hsl(var(--hue-color), 0%, 20%);
+  --color-box-first-bg: hsl(var(--hue-color), 93%, 15%);
+  --color-box-second-bg: hsl(var(--hue-color), 93%, 10%);
+  //
+  --color-title: #f1f3f2;
+  --color-text: #f1f3f2;
+  --color-container: #27302c;
+  // Header
+  // hsl(33, 0%, 20%)
+  --color-first-header: hsl(var(--hue-color), 20%, 20%) !important;
+  // White
+  --color-second-header: hsl(var(--hue-color), 93%, 100%);
+  // Black
+  --color-third-header: hsl(var(--hue-color), 93%, 5%);
+}
 
 /*
 ===========================================================
@@ -410,6 +427,13 @@ Todo ================= Header =============================
               display: none;
             }
           }
+          // Change Theme
+          .change-theme {
+            position: absolute;
+            right: 1rem;
+            i {
+            }
+          }
         }
       }
     }
@@ -426,8 +450,10 @@ Todo ================= Header =============================
   }
 }
 
-
 // For Test
+body {
+  background-color: var(--color-body);
+}
 section {
   min-height: 100vh;
   display: flex;

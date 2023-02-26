@@ -115,6 +115,19 @@ Todo ================= VARIABLES CSS ======================
     --smaller-font-size: 0.813rem;
   }
 }
+/* ========== Variables Dark theme==========  */
+body.dark-theme {
+  --color-body: hsl(var(--hue-color), 0%, 20%);
+  --color-box-first-bg: hsl(var(--hue-color), 93%, 15%);
+  --color-box-second-bg: hsl(var(--hue-color), 93%, 10%);
+  --color-title: #f1f3f2;
+  --color-text: #f1f3f2;
+  --color-container: #27302c;
+  --color-first-header: hsl(var(--hue-color), 20%, 20%) !important;
+  --color-second-header: hsl(var(--hue-color), 93%, 100%);
+  --color-third-header: hsl(var(--hue-color), 93%, 5%);
+}
+
 /*
 ===========================================================
 Todo ================= Header ============================= 
@@ -428,6 +441,10 @@ Todo ================= Header =============================
     display: none;
   }
 }
+.header .nav .nav-wrapper .container .nav-inner .change-theme {
+  position: absolute;
+  right: 1rem;
+}
 .header.header-scroll-action {
   /* If You Use Header To Be Fixed Element */
   position: fixed;
@@ -436,6 +453,10 @@ Todo ================= Header =============================
   width: 100%;
   z-index: var(--z-fixed);
   background-color: var(--color-first-header);
+}
+
+body {
+  background-color: var(--color-body);
 }
 
 section {
